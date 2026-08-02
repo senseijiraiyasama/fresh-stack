@@ -8,9 +8,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Plus Jakarta Sans', sans-serif; }
-        details > summary { list-style: none; }
-        details > summary::-webkit-details-marker { display: none; }
-        details[open] .faq-icon { transform: rotate(45deg); }
     </style>
 </head>
 <body class="bg-zinc-950 text-white antialiased selection:bg-orange-500 selection:text-white">
@@ -21,176 +18,138 @@
         </div>
     </header>
 
-    <!-- HERO: text shifted left, food owns the right side, bigger email capture -->
-    <section class="relative min-h-screen flex items-center overflow-hidden px-6 md:px-16 pt-24">
-
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden px-6 pt-20">
         <div class="absolute inset-0 z-0">
-            <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=1920&q=80"
-                 alt="Fresh Juicy Burger"
-                 class="w-full h-full object-cover object-right filter brightness-50">
-            <div class="absolute inset-0 bg-gradient-to-r from-zinc-950 via-zinc-950/70 to-zinc-950/20"></div>
-            <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-transparent to-zinc-950/60"></div>
+            <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=1920&q=80" 
+                 alt="Fresh Gourmet Burger" 
+                 class="w-full h-full object-cover filter brightness-50">
+            <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/40 to-zinc-950/80"></div>
         </div>
 
-        <div class="relative z-10 max-w-2xl text-left space-y-6">
-
-            <span class="inline-block px-4 py-1.5 rounded-full border border-orange-500/30 bg-orange-500/10 text-orange-400 text-xs tracking-widest uppercase font-semibold">
+        <div class="relative z-10 max-w-4xl text-center space-y-8">
+            <span class="px-4 py-1.5 rounded-full border border-orange-500/30 bg-orange-500/10 text-orange-400 text-xs tracking-widest uppercase font-semibold">
                 Coming Soon
             </span>
-
-            <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight leading-[1.05]">
+            
+            <h1 class="text-6xl md:text-8xl font-extrabold tracking-tight">
                 FRESH <span class="text-orange-500">STACK</span>
             </h1>
-
-            <p class="text-lg md:text-2xl font-medium text-zinc-200 max-w-xl leading-relaxed">
+            
+            <p class="text-xl md:text-3xl font-medium text-zinc-200 max-w-2xl mx-auto leading-relaxed">
                 "All you can eat with no added sugars. And that's a promise."
             </p>
 
-            <p class="text-sm text-zinc-400 tracking-wide uppercase font-semibold">
-                Launching in Texas
-            </p>
-
-            <form class="pt-4" onsubmit="event.preventDefault();">
-                <div class="flex flex-col sm:flex-row gap-3 max-w-xl bg-zinc-900/60 border border-zinc-700/80 rounded-2xl p-2 backdrop-blur-md">
-                    <input type="email"
-                           placeholder="Enter your email for early access"
-                           class="w-full px-4 py-4 rounded-xl bg-transparent text-white placeholder-zinc-500 focus:outline-none text-base">
-                    <button type="submit"
-                            class="px-8 py-4 rounded-xl bg-orange-500 hover:bg-orange-600 font-bold transition whitespace-nowrap shadow-lg shadow-orange-500/25 text-base">
-                        Notify Me
-                    </button>
-                </div>
-            </form>
-
-        </div>
-    </section>
-
-    <!-- SUGAR CALLOUT: full-bleed background image with dark overlay, text sits on top -->
-    <section class="relative py-32 px-6 overflow-hidden">
-        <div class="absolute inset-0 z-0">
-            <img src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?auto=format&fit=crop&w=1920&q=80"
-                 alt="Sauce being poured"
-                 class="w-full h-full object-cover">
-            <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/30 to-zinc-950/50"></div>
-        </div>
-
-        <div class="relative z-10 max-w-3xl mx-auto text-center space-y-6">
-            <h2 class="text-3xl md:text-5xl font-extrabold tracking-tight drop-shadow-lg">
-                Sugar Snuck In. <span class="text-orange-500">We Kicked It Out.</span>
-            </h2>
-            <p class="text-lg md:text-xl text-zinc-200 leading-relaxed drop-shadow">
-                Let's be real — you didn't sign up for a sugar rush with your burger. But somehow it's in the bun. It's in the sauce. It's basically everywhere, and no one's talking about it.
-            </p>
-            <p class="text-lg md:text-xl text-zinc-200 leading-relaxed drop-shadow">
-                We are.
-            </p>
-            <p class="text-xl md:text-2xl font-bold text-white drop-shadow-lg">
-                Fresh Stack has zero added sugar. Period.
-            </p>
-            <p class="text-lg md:text-xl text-zinc-200 leading-relaxed drop-shadow">
-                No syrups, no glazes, no "just a little" hiding in the ketchup. Just good food that tastes like food — because that's what it should've been all along.
-            </p>
-            <p class="text-lg md:text-xl font-semibold text-orange-400 drop-shadow">
-                Come hungry. Leave without the crash.
-            </p>
-        </div>
-    </section>
-
-    <!-- TRUST CARDS: text overlaid directly on images, collage-style, offset -->
-    <section class="py-24 px-6 relative z-10 max-w-6xl mx-auto">
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-
-            <div class="relative rounded-3xl overflow-hidden h-[420px] group md:mt-12">
-                <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=800&q=80"
-                     alt="Clean Gourmet Burger"
-                     class="absolute inset-0 w-full h-full object-cover transition duration-700 group-hover:scale-105">
-                <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/30 to-transparent"></div>
-                <div class="absolute bottom-0 left-0 right-0 p-8 space-y-3">
-                    <h3 class="text-3xl font-extrabold drop-shadow-lg">100% Real Ingredients</h3>
-                    <p class="text-zinc-100 leading-relaxed drop-shadow max-w-sm">No hidden syrups, artificial glazes, or unnecessary additives. Pure, high-grade taste without compromise.</p>
-                </div>
-            </div>
-
-            <div class="relative rounded-3xl overflow-hidden h-[420px] group">
-                <img src="https://images.unsplash.com/photo-1586190848861-99aa4a171e90?auto=format&fit=crop&w=800&q=80"
-                     alt="Fresh Produce"
-                     class="absolute inset-0 w-full h-full object-cover transition duration-700 group-hover:scale-105">
-                <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/30 to-transparent"></div>
-                <div class="absolute bottom-0 left-0 right-0 p-8 space-y-3">
-                    <h3 class="text-3xl font-extrabold drop-shadow-lg">Zero Guilt</h3>
-                    <p class="text-zinc-100 leading-relaxed drop-shadow max-w-sm">Eat as much as you like. Crafted specifically to leave you feeling energized and satisfied, never heavy.</p>
-                </div>
-            </div>
-
-        </div>
-
-    </section>
-
-    <!-- FAQ: background image with dark overlay, cards use glassy blur so image shows through -->
-    <section class="relative py-24 px-6 overflow-hidden">
-        <div class="absolute inset-0 z-0">
-            <img src="https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?auto=format&fit=crop&w=1920&q=80"
-                 alt="Wooden table texture"
-                 class="w-full h-full object-cover">
-            <div class="absolute inset-0 bg-zinc-950/60"></div>
-        </div>
-
-        <div class="relative z-10 max-w-3xl mx-auto">
-        <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight text-center mb-12">
-            Frequently Asked <span class="text-orange-500">Questions</span>
-        </h2>
-
-        <div class="space-y-4">
-
-            <details class="group bg-zinc-900/60 border border-zinc-800/80 rounded-2xl p-6 backdrop-blur-md" open>
-                <summary class="flex justify-between items-center cursor-pointer font-bold text-lg">
-                    Is Fresh Stack really sugar-free, or just "no added sugar"?
-                    <span class="faq-icon text-orange-500 text-2xl transition-transform">+</span>
-                </summary>
-                <p class="text-zinc-400 leading-relaxed mt-4">
-                    Good catch — there's a difference. Stuff like tomatoes, onions, and our buns have a little natural sugar in them, because, well, that's just how food works. We don't add a single gram on top of that. No syrups, no glazes, nothing sneaking into the sauce. It's just what nature packed in — nothing extra, nothing hidden.
-                </p>
-            </details>
-
-            <details class="group bg-zinc-900/60 border border-zinc-800/80 rounded-2xl p-6 backdrop-blur-md">
-                <summary class="flex justify-between items-center cursor-pointer font-bold text-lg">
-                    Will it taste different without added sugar?
-                    <span class="faq-icon text-orange-500 text-2xl transition-transform">+</span>
-                </summary>
-                <p class="text-zinc-400 leading-relaxed mt-4">
-                    [Add your answer here]
-                </p>
-            </details>
-
-            <details class="group bg-zinc-900/60 border border-zinc-800/80 rounded-2xl p-6 backdrop-blur-md">
-                <summary class="flex justify-between items-center cursor-pointer font-bold text-lg">
-                    Where will Fresh Stack be located?
-                    <span class="faq-icon text-orange-500 text-2xl transition-transform">+</span>
-                </summary>
-                <p class="text-zinc-400 leading-relaxed mt-4">
-                    We're launching in Texas! Exact location details coming soon — join the list above to be the first to know.
-                </p>
-            </details>
-
-        </div>
-        </div>
-    </section>
-
-    <!-- FOOTER with second email capture -->
-    <footer class="py-20 px-6 border-t border-zinc-900">
-        <div class="max-w-xl mx-auto text-center space-y-6">
-            <h3 class="text-2xl font-bold">Don't miss the launch.</h3>
-            <form class="flex flex-col sm:flex-row gap-3" onsubmit="event.preventDefault();">
-                <input type="email"
-                       placeholder="Enter your email for early access"
-                       class="w-full px-5 py-4 rounded-xl bg-zinc-900/80 border border-zinc-700/80 text-white placeholder-zinc-500 focus:outline-none focus:border-orange-500 transition">
-                <button type="submit"
+            <form class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto pt-4" onsubmit="event.preventDefault();">
+                <input type="email" 
+                       placeholder="Enter your email for early access" 
+                       class="w-full px-5 py-4 rounded-xl bg-zinc-900/80 border border-zinc-700/80 text-white placeholder-zinc-500 focus:outline-none focus:border-orange-500 backdrop-blur-md transition">
+                <button type="submit" 
                         class="px-8 py-4 rounded-xl bg-orange-500 hover:bg-orange-600 font-bold transition whitespace-nowrap shadow-lg shadow-orange-500/25">
                     Notify Me
                 </button>
             </form>
-            <p class="text-sm text-zinc-600 pt-6">&copy; 2026 FRESH STACK. All rights reserved.</p>
+        </div>
+    </section>
+
+    <section class="w-full bg-gradient-to-r from-orange-600 via-amber-600 to-orange-500 text-white py-20 px-6 my-12 shadow-2xl">
+        <div class="max-w-4xl mx-auto text-center space-y-6">
+            <span class="px-4 py-1.5 rounded-full bg-black/20 text-white text-xs tracking-widest uppercase font-bold backdrop-blur-sm">
+                Rethink Fast Food
+            </span>
+            <h2 class="text-4xl md:text-6xl font-extrabold tracking-tight">
+                Soda shop soda vibes. Zero sugar lies.
+            </h2>
+            <p class="text-lg md:text-2xl font-medium text-orange-100 max-w-3xl mx-auto leading-relaxed">
+                We swapped hidden syrups and cheap sugar fills for pure, crave-worthy flavor. Real food should feel good while you eat it—and even better after.
+            </p>
+        </div>
+    </section>
+
+    <section class="py-16 px-6 max-w-5xl mx-auto space-y-12">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="p-8 rounded-3xl bg-zinc-900/50 border border-zinc-800/80 backdrop-blur-sm space-y-4 hover:border-zinc-700 transition">
+                <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=600&q=80" 
+                     alt="Clean Gourmet Burger" 
+                     class="w-full h-56 object-cover rounded-2xl mb-4">
+                <h3 class="text-2xl font-bold">100% Real Ingredients</h3>
+                <p class="text-zinc-400 leading-relaxed">No hidden syrups, artificial glazes, or unnecessary additives. Pure, high-grade taste without compromise.</p>
+            </div>
+
+            <div class="p-8 rounded-3xl bg-zinc-900/50 border border-zinc-800/80 backdrop-blur-sm space-y-4 hover:border-zinc-700 transition">
+                <img src="https://images.unsplash.com/photo-1586190848861-99aa4a171e90?auto=format&fit=crop&w=600&q=80" 
+                     alt="Fresh Produce" 
+                     class="w-full h-56 object-cover rounded-2xl mb-4">
+                <h3 class="text-2xl font-bold">Zero Guilt</h3>
+                <p class="text-zinc-400 leading-relaxed">Eat as much as you like. Crafted specifically to leave you feeling energized and satisfied, never heavy.</p>
+            </div>
+        </div>
+
+        <div class="relative h-80 md:h-96 rounded-3xl overflow-hidden shadow-xl border border-zinc-800">
+            <img src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&w=1200&q=80" 
+                 alt="Fresh ingredients layout" 
+                 class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-zinc-950/40 flex items-center justify-center p-6 text-center">
+                <p class="text-2xl md:text-3xl font-extrabold text-white tracking-wide drop-shadow-md">
+                    Freshly Sourced. Responsibly Prepared.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 px-6 max-w-3xl mx-auto space-y-8">
+        <h2 class="text-3xl md:text-4xl font-extrabold text-center tracking-tight">
+            Frequently Asked Questions
+        </h2>
+
+        <div class="space-y-4">
+            <details class="group bg-zinc-900/60 border border-zinc-800 rounded-2xl p-6 [&_summary::-webkit-details-marker]:hidden cursor-pointer">
+                <summary class="flex items-center justify-between font-bold text-lg text-white">
+                    <span>How do you make fast food without added sugars?</span>
+                    <span class="ml-4 transition-transform group-open:rotate-180 text-orange-500">▼</span>
+                </summary>
+                <p class="mt-4 text-zinc-400 leading-relaxed">
+                    We focus on whole, high-quality ingredients, custom spice blends, and natural cooking techniques to lock in deep flavor without relying on added sugars or sweet glazes.
+                </p>
+            </details>
+
+            <details class="group bg-zinc-900/60 border border-zinc-800 rounded-2xl p-6 [&_summary::-webkit-details-marker]:hidden cursor-pointer">
+                <summary class="flex items-center justify-between font-bold text-lg text-white">
+                    <span>When and where are you launching?</span>
+                    <span class="ml-4 transition-transform group-open:rotate-180 text-orange-500">▼</span>
+                </summary>
+                <p class="mt-4 text-zinc-400 leading-relaxed">
+                    We are gearing up for launch soon! Join our email list above to get early drops, launch updates, and exclusive opening-day invites.
+                </p>
+            </details>
+
+            <details class="group bg-zinc-900/60 border border-zinc-800 rounded-2xl p-6 [&_summary::-webkit-details-marker]:hidden cursor-pointer">
+                <summary class="flex items-center justify-between font-bold text-lg text-white">
+                    <span>Does it taste different from traditional burgers?</span>
+                    <span class="ml-4 transition-transform group-open:rotate-180 text-orange-500">▼</span>
+                </summary>
+                <p class="mt-4 text-zinc-400 leading-relaxed italic">
+                    [ Placeholder: Your custom answer regarding flavor profile will go here! ]
+                </p>
+            </details>
+        </div>
+    </section>
+
+    <footer class="py-16 border-t border-zinc-900 text-center px-6 bg-zinc-950/80">
+        <div class="max-w-md mx-auto space-y-6">
+            <h3 class="text-2xl font-bold">Don't miss the launch</h3>
+            <p class="text-zinc-400 text-sm">Be the first in line when our doors open.</p>
+            
+            <form class="flex flex-col sm:flex-row gap-3" onsubmit="event.preventDefault();">
+                <input type="email" 
+                       placeholder="Enter your email" 
+                       class="w-full px-5 py-4 rounded-xl bg-zinc-900 border border-zinc-700 text-white placeholder-zinc-500 focus:outline-none focus:border-orange-500 transition">
+                <button type="submit" 
+                        class="px-8 py-4 rounded-xl bg-orange-500 hover:bg-orange-600 font-bold transition whitespace-nowrap shadow-lg shadow-orange-500/25">
+                    Join VIP
+                </button>
+            </form>
+
+            <p class="pt-8 text-xs text-zinc-600">&copy; 2026 FRESH STACK. All rights reserved.</p>
         </div>
     </footer>
 

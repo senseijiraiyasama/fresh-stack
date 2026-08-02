@@ -1,10 +1,84 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My First Website</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FRESH STACK | Coming Soon</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    </style>
 </head>
-<body>
-    <h1>Hello, World!</h1>
-    <p>My site is live on GitHub Pages!</p>
+<body class="bg-zinc-950 text-white antialiased selection:bg-orange-500 selection:text-white">
+
+    <header class="absolute top-0 left-0 right-0 z-20 py-6 px-8 flex justify-between items-center max-w-7xl mx-auto">
+        <div class="text-2xl font-black tracking-wider text-white">
+            FRESH <span class="text-orange-500">STACK</span>
+        </div>
+    </header>
+
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden px-6 pt-20">
+        
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=1920&q=80" 
+                 alt="Fresh Juicy Burger" 
+                 class="w-full h-full object-cover filter brightness-50">
+            <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/40 to-zinc-950/80"></div>
+        </div>
+
+        <div class="relative z-10 max-w-4xl text-center space-y-8">
+            
+            <span class="px-4 py-1.5 rounded-full border border-orange-500/30 bg-orange-500/10 text-orange-400 text-xs tracking-widest uppercase font-semibold">
+                Coming Soon
+            </span>
+            
+            <h1 class="text-6xl md:text-8xl font-extrabold tracking-tight">
+                FRESH <span class="text-orange-500">STACK</span>
+            </h1>
+            
+            <p class="text-xl md:text-3xl font-medium text-zinc-200 max-w-2xl mx-auto leading-relaxed">
+                "All you can eat with no added sugars. And that's a promise."
+            </p>
+
+            <form class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto pt-4" onsubmit="event.preventDefault();">
+                <input type="email" 
+                       placeholder="Enter your email for early access" 
+                       class="w-full px-5 py-4 rounded-xl bg-zinc-900/80 border border-zinc-700/80 text-white placeholder-zinc-500 focus:outline-none focus:border-orange-500 backdrop-blur-md transition">
+                <button type="submit" 
+                        class="px-8 py-4 rounded-xl bg-orange-500 hover:bg-orange-600 font-bold transition whitespace-nowrap shadow-lg shadow-orange-500/25">
+                    Notify Me
+                </button>
+            </form>
+            
+        </div>
+    </section>
+
+    <section class="py-24 px-6 relative z-10 max-w-5xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            
+            <div class="p-8 rounded-3xl bg-zinc-900/50 border border-zinc-800/80 backdrop-blur-sm space-y-4 hover:border-zinc-700 transition">
+                <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=600&q=80" 
+                     alt="Clean Gourmet Burger" 
+                     class="w-full h-56 object-cover rounded-2xl mb-4">
+                <h3 class="text-2xl font-bold">100% Real Ingredients</h3>
+                <p class="text-zinc-400 leading-relaxed">No hidden syrups, artificial glazes, or unnecessary additives. Pure, high-grade taste without compromise.</p>
+            </div>
+
+            <div class="p-8 rounded-3xl bg-zinc-900/50 border border-zinc-800/80 backdrop-blur-sm space-y-4 hover:border-zinc-700 transition">
+                <img src="https://images.unsplash.com/photo-1586190848861-99aa4a171e90?auto=format&fit=crop&w=600&q=80" 
+                     alt="Fresh Produce" 
+                     class="w-full h-56 object-cover rounded-2xl mb-4">
+                <h3 class="text-2xl font-bold">Zero Guilt</h3>
+                <p class="text-zinc-400 leading-relaxed">Eat as much as you like. Crafted specifically to leave you feeling energized and satisfied, never heavy.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="py-12 border-t border-zinc-900 text-center text-sm text-zinc-600">
+        <p>&copy; 2026 FRESH STACK. All rights reserved.</p>
+    </footer>
+
 </body>
 </html>

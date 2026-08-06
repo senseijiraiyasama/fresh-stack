@@ -4,6 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FRESH STACK | No Added Sugars Fast Food</title>
+
+    <!-- ============================================================
+         SECTION: PAGE SETUP
+         What this does: Sets the browser tab title, loads the styling
+         tool (Tailwind CSS) that controls colors/spacing/layout, and
+         loads the custom font used everywhere on the page.
+    ============================================================= -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800;900&display=swap" rel="stylesheet">
     <style>
@@ -12,6 +19,13 @@
 </head>
 <body class="bg-zinc-950 text-white antialiased selection:bg-orange-500 selection:text-white">
 
+    <!-- ============================================================
+         SECTION: TOP NAVIGATION BAR
+         What this does: The bar that stays pinned to the top of the
+         screen as you scroll. Shows the "FRESH STACK" logo on the
+         left and a "View Full Menu" button on the right that jumps
+         down to the Menu section.
+    ============================================================= -->
     <header class="fixed top-0 left-0 right-0 z-50 bg-zinc-950/80 backdrop-blur-md border-b border-zinc-900">
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
             <div class="text-2xl font-black tracking-wider text-white">
@@ -23,6 +37,13 @@
         </div>
     </header>
 
+    <!-- ============================================================
+         SECTION: HERO (BIG INTRO BANNER AT TOP OF PAGE)
+         What this does: The large full-screen image + headline the
+         visitor sees first. Includes the "Coming Soon" tag, the big
+         "FRESH STACK" title, the tagline, and the email signup box
+         for people to get notified about launch.
+    ============================================================= -->
     <section class="relative min-h-screen flex items-center justify-center overflow-hidden px-6 pt-28">
         <div class="absolute inset-0 z-0">
             <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=1920&q=80" 
@@ -44,6 +65,7 @@
                 "All you can eat with no added sugars. And that's a promise."
             </p>
 
+            <!-- Email signup box (hero version) -->
             <form class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto pt-4" onsubmit="event.preventDefault();">
                 <input type="email" 
                        placeholder="Enter your email for early access" 
@@ -56,6 +78,12 @@
         </div>
     </section>
 
+    <!-- ============================================================
+         SECTION: BRAND MESSAGE / MISSION STATEMENT BANNER
+         What this does: The dark card with the glowing orange
+         background that says "Real Flavor. Zero Sugar Lies." — this
+         is the short pitch explaining the restaurant's philosophy.
+    ============================================================= -->
     <section class="py-20 px-6 relative z-10 max-w-5xl mx-auto">
         <div class="absolute inset-0 bg-orange-500/10 blur-3xl rounded-full pointer-events-none -z-10"></div>
         <div class="relative bg-zinc-900/80 border border-zinc-800 rounded-3xl p-10 md:p-16 backdrop-blur-xl text-center space-y-6 shadow-2xl">
@@ -71,6 +99,13 @@
         </div>
     </section>
 
+    <!-- ============================================================
+         SECTION: FULL MENU (the big one — everything food-related lives here)
+         What this does: Wraps the whole menu area: the "OUR MENU"
+         title, the left-side category jump-links, and all the food
+         category blocks below (Burgers, Chicken, etc). Everything
+         from here down to the closing </section> is the menu.
+    ============================================================= -->
     <section id="menu" class="py-20 px-6 max-w-7xl mx-auto">
         <div class="text-center mb-16 space-y-4">
             <h2 class="text-4xl md:text-6xl font-black tracking-tight">OUR MENU</h2>
@@ -79,6 +114,13 @@
 
         <div class="lg:grid lg:grid-cols-4 gap-10">
             
+            <!-- ----------------------------------------------------
+                 SUB-SECTION: MENU SIDEBAR (jump-to-category links)
+                 What this does: The list of clickable category names
+                 (🍔 Burgers, 🍗 Chicken, etc.) that jumps the page down
+                 to that category when clicked. On mobile this becomes
+                 a horizontal scrolling strip instead of a sidebar.
+            ------------------------------------------------------- -->
             <div class="lg:col-span-1">
                 <div class="sticky top-24 bg-zinc-900/80 border border-zinc-800 rounded-2xl p-4 backdrop-blur-md overflow-x-auto lg:overflow-visible flex lg:flex-col gap-2 mb-8 lg:mb-0">
                     <a href="#burgers" class="px-4 py-3 rounded-xl hover:bg-zinc-800 font-bold text-sm flex items-center gap-3 transition">🍔 Burgers</a>
@@ -96,10 +138,18 @@
 
             <div class="lg:col-span-3 space-y-16">
 
+                <!-- ------------------------------------------------
+                     SUB-SECTION: BURGERS CATEGORY
+                     What this does: Shows every burger item as a
+                     photo card with name + description. Each card
+                     below (Classic Burger, Double Stack, etc.) is
+                     one menu item.
+                --------------------------------------------------- -->
                 <div id="burgers" class="space-y-6">
                     <h3 class="text-3xl font-extrabold text-orange-500 border-b border-zinc-800 pb-3">Burgers</h3>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         
+                        <!-- Item: Classic Burger -->
                         <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-5 flex flex-col justify-between hover:border-zinc-700 transition">
                             <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=600&q=80" alt="Classic Burger" class="w-full h-44 object-cover rounded-xl mb-4">
                             <div>
@@ -108,6 +158,7 @@
                             </div>
                         </div>
 
+                        <!-- Item: Double Stack -->
                         <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-5 flex flex-col justify-between hover:border-zinc-700 transition">
                             <img src="https://images.unsplash.com/photo-1586190848861-99aa4a171e90?auto=format&fit=crop&w=600&q=80" alt="Double Stack" class="w-full h-44 object-cover rounded-xl mb-4">
                             <div>
@@ -116,6 +167,7 @@
                             </div>
                         </div>
 
+                        <!-- Item: Grilled Mushroom Swiss -->
                         <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-5 flex flex-col justify-between hover:border-zinc-700 transition">
                             <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=600&q=80" alt="Grilled Mushroom Swiss" class="w-full h-44 object-cover rounded-xl mb-4">
                             <div>
@@ -124,6 +176,7 @@
                             </div>
                         </div>
 
+                        <!-- Item: Smoky Burger -->
                         <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-5 flex flex-col justify-between hover:border-zinc-700 transition">
                             <img src="https://images.unsplash.com/photo-1553979459-d2229ba7433b?auto=format&fit=crop&w=600&q=80" alt="Smoky Burger" class="w-full h-44 object-cover rounded-xl mb-4">
                             <div>
@@ -132,6 +185,7 @@
                             </div>
                         </div>
 
+                        <!-- Item: Veggie Burger -->
                         <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-5 flex flex-col justify-between hover:border-zinc-700 transition">
                             <img src="https://images.unsplash.com/photo-1520072959219-c595dc870360?auto=format&fit=crop&w=600&q=80" alt="Veggie Burger" class="w-full h-44 object-cover rounded-xl mb-4">
                             <div>
@@ -143,34 +197,44 @@
                     </div>
                 </div>
 
+                <!-- ------------------------------------------------
+                     SUB-SECTION: CHICKEN CATEGORY
+                     What this does: Shows every chicken item as a
+                     photo card with name + description.
+                --------------------------------------------------- -->
                 <div id="chicken" class="space-y-6">
                     <h3 class="text-3xl font-extrabold text-orange-500 border-b border-zinc-800 pb-3">Chicken</h3>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         
+                        <!-- Item: Grilled Chicken Sandwich -->
                         <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-5 hover:border-zinc-700 transition">
                             <img src="https://images.unsplash.com/photo-1606755962773-d324e0a13086?auto=format&fit=crop&w=600&q=80" alt="Grilled Chicken Sandwich" class="w-full h-44 object-cover rounded-xl mb-4">
                             <h4 class="text-xl font-bold">Grilled Chicken Sandwich</h4>
                             <p class="text-zinc-400 text-sm mt-1">Grilled breast, lettuce, tomato, no-sugar bun</p>
                         </div>
 
+                        <!-- Item: Crispy Chicken Sandwich -->
                         <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-5 hover:border-zinc-700 transition">
                             <img src="https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?auto=format&fit=crop&w=600&q=80" alt="Crispy Chicken Sandwich" class="w-full h-44 object-cover rounded-xl mb-4">
                             <h4 class="text-xl font-bold">Crispy Chicken Sandwich</h4>
                             <p class="text-zinc-400 text-sm mt-1">Buttermilk-brined, breaded (sugar-free breading), fried</p>
                         </div>
 
+                        <!-- Item: Spicy Chicken Sandwich -->
                         <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-5 hover:border-zinc-700 transition">
                             <img src="https://images.unsplash.com/photo-1625813506062-0aeb1d7a094b?auto=format&fit=crop&w=600&q=80" alt="Spicy Chicken Sandwich" class="w-full h-44 object-cover rounded-xl mb-4">
                             <h4 class="text-xl font-bold">Spicy Chicken Sandwich</h4>
                             <p class="text-zinc-400 text-sm mt-1">Same as crispy + cayenne-vinegar hot sauce (no sugar)</p>
                         </div>
 
+                        <!-- Item: Chicken Tenders -->
                         <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-5 hover:border-zinc-700 transition">
                             <img src="https://images.unsplash.com/photo-1562967914-608f82629710?auto=format&fit=crop&w=600&q=80" alt="Chicken Tenders" class="w-full h-44 object-cover rounded-xl mb-4">
                             <h4 class="text-xl font-bold">Chicken Tenders</h4>
                             <p class="text-zinc-400 text-sm mt-1">Hand-breaded, served with sugar-free dipping sauces</p>
                         </div>
 
+                        <!-- Item: Buffalo Wings -->
                         <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-5 hover:border-zinc-700 transition">
                             <img src="https://images.unsplash.com/photo-1567620832903-9fc6debc209f?auto=format&fit=crop&w=600&q=80" alt="Buffalo Wings" class="w-full h-44 object-cover rounded-xl mb-4">
                             <h4 class="text-xl font-bold">Buffalo Wings</h4>
@@ -180,22 +244,28 @@
                     </div>
                 </div>
 
+                <!-- ------------------------------------------------
+                     SUB-SECTION: SANDWICHES & WRAPS CATEGORY
+                --------------------------------------------------- -->
                 <div id="wraps" class="space-y-6">
                     <h3 class="text-3xl font-extrabold text-orange-500 border-b border-zinc-800 pb-3">Sandwiches & Wraps</h3>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         
+                        <!-- Item: Turkey Club Wrap -->
                         <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-5 hover:border-zinc-700 transition">
                             <img src="https://images.unsplash.com/photo-1509722747041-616f39b57569?auto=format&fit=crop&w=600&q=80" alt="Turkey Club Wrap" class="w-full h-44 object-cover rounded-xl mb-4">
                             <h4 class="text-xl font-bold">Turkey Club Wrap</h4>
                             <p class="text-zinc-400 text-sm mt-1">Turkey, lettuce, tomato, avocado, no-sugar mayo</p>
                         </div>
 
+                        <!-- Item: Fish Sandwich -->
                         <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-5 hover:border-zinc-700 transition">
                             <img src="https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&w=600&q=80" alt="Fish Sandwich" class="w-full h-44 object-cover rounded-xl mb-4">
                             <h4 class="text-xl font-bold">Fish Sandwich</h4>
                             <p class="text-zinc-400 text-sm mt-1">Beer-battered (no-sugar batter) or grilled white fish</p>
                         </div>
 
+                        <!-- Item: Steak Wrap -->
                         <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-5 hover:border-zinc-700 transition">
                             <img src="https://images.unsplash.com/photo-1626700051175-6818013e1d4f?auto=format&fit=crop&w=600&q=80" alt="Steak Wrap" class="w-full h-44 object-cover rounded-xl mb-4">
                             <h4 class="text-xl font-bold">Steak Wrap</h4>
@@ -205,16 +275,21 @@
                     </div>
                 </div>
 
+                <!-- ------------------------------------------------
+                     SUB-SECTION: SALADS CATEGORY
+                --------------------------------------------------- -->
                 <div id="salads" class="space-y-6">
                     <h3 class="text-3xl font-extrabold text-orange-500 border-b border-zinc-800 pb-3">Salads</h3>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         
+                        <!-- Item: Garden Salad -->
                         <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-5 hover:border-zinc-700 transition">
                             <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=600&q=80" alt="Garden Salad" class="w-full h-44 object-cover rounded-xl mb-4">
                             <h4 class="text-xl font-bold">Garden Salad</h4>
                             <p class="text-zinc-400 text-sm mt-1">Mixed greens, tomato, cucumber, carrot, red onion, choice of dressing</p>
                         </div>
 
+                        <!-- Item: Grilled Chicken Salad -->
                         <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-5 hover:border-zinc-700 transition">
                             <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=600&q=80" alt="Grilled Chicken Salad" class="w-full h-44 object-cover rounded-xl mb-4">
                             <h4 class="text-xl font-bold">Grilled Chicken Salad</h4>
@@ -224,22 +299,28 @@
                     </div>
                 </div>
 
+                <!-- ------------------------------------------------
+                     SUB-SECTION: SIDES CATEGORY
+                --------------------------------------------------- -->
                 <div id="sides" class="space-y-6">
                     <h3 class="text-3xl font-extrabold text-orange-500 border-b border-zinc-800 pb-3">Sides</h3>
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                         
+                        <!-- Item: French Fries -->
                         <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-5 hover:border-zinc-700 transition">
                             <img src="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&w=600&q=80" alt="French Fries" class="w-full h-36 object-cover rounded-xl mb-4">
                             <h4 class="text-lg font-bold">French Fries</h4>
                             <p class="text-zinc-400 text-xs mt-1">Fried in clean oil, salt only</p>
                         </div>
 
+                        <!-- Item: Onion Rings -->
                         <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-5 hover:border-zinc-700 transition">
                             <img src="https://images.unsplash.com/photo-1639024471283-03518883512d?auto=format&fit=crop&w=600&q=80" alt="Onion Rings" class="w-full h-36 object-cover rounded-xl mb-4">
                             <h4 class="text-lg font-bold">Onion Rings</h4>
                             <p class="text-zinc-400 text-xs mt-1">Sugar-free batter</p>
                         </div>
 
+                        <!-- Item: Hash Browns -->
                         <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-5 hover:border-zinc-700 transition">
                             <img src="https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=600&q=80" alt="Hash Browns" class="w-full h-36 object-cover rounded-xl mb-4">
                             <h4 class="text-lg font-bold">Hash Browns</h4>
@@ -249,28 +330,35 @@
                     </div>
                 </div>
 
+                <!-- ------------------------------------------------
+                     SUB-SECTION: BREAKFAST CATEGORY
+                --------------------------------------------------- -->
                 <div id="breakfast" class="space-y-6">
                     <h3 class="text-3xl font-extrabold text-orange-500 border-b border-zinc-800 pb-3">Breakfast</h3>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         
+                        <!-- Item: Egg & Cheese Biscuit -->
                         <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-5 hover:border-zinc-700 transition">
                             <img src="https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=600&q=80" alt="Egg & Cheese Biscuit" class="w-full h-44 object-cover rounded-xl mb-4">
                             <h4 class="text-xl font-bold">Egg & Cheese Biscuit</h4>
                             <p class="text-zinc-400 text-sm mt-1">No-sugar biscuit recipe (butter-laminated, salt-leavened)</p>
                         </div>
 
+                        <!-- Item: Sausage Biscuit -->
                         <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-5 hover:border-zinc-700 transition">
                             <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=600&q=80" alt="Sausage Biscuit" class="w-full h-44 object-cover rounded-xl mb-4">
                             <h4 class="text-xl font-bold">Sausage Biscuit</h4>
                             <p class="text-zinc-400 text-sm mt-1">Same biscuit + breakfast sausage patty</p>
                         </div>
 
+                        <!-- Item: Breakfast Burrito -->
                         <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-5 hover:border-zinc-700 transition">
                             <img src="https://images.unsplash.com/photo-1626700051175-6818013e1d4f?auto=format&fit=crop&w=600&q=80" alt="Breakfast Burrito" class="w-full h-44 object-cover rounded-xl mb-4">
                             <h4 class="text-xl font-bold">Breakfast Burrito</h4>
                             <p class="text-zinc-400 text-sm mt-1">Eggs, cheese, potatoes, salsa, no-sugar tortilla</p>
                         </div>
 
+                        <!-- Item: Pancakes -->
                         <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-5 hover:border-zinc-700 transition">
                             <img src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?auto=format&fit=crop&w=600&q=80" alt="Pancakes (3-stack)" class="w-full h-44 object-cover rounded-xl mb-4">
                             <h4 class="text-xl font-bold">Pancakes (3-stack)</h4>
@@ -280,29 +368,39 @@
                     </div>
                 </div>
 
+                <!-- ------------------------------------------------
+                     SUB-SECTION: KID'S MEALS CATEGORY
+                     Note: the italic line right under the heading is
+                     a shared note ("drink included") that applies to
+                     every kid's meal card below it.
+                --------------------------------------------------- -->
                 <div id="kids" class="space-y-6">
                     <h3 class="text-3xl font-extrabold text-orange-500 border-b border-zinc-800 pb-3">Kid's Meals</h3>
                     <p class="text-zinc-400 text-xs italic">All kid's meals include choice of Coke Zero, monk fruit-sweetened lemonade, or milk.</p>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         
+                        <!-- Item: Kid's Burger -->
                         <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-5 hover:border-zinc-700 transition">
                             <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=600&q=80" alt="Kid's Burger" class="w-full h-44 object-cover rounded-xl mb-4">
                             <h4 class="text-xl font-bold">Kid's Burger</h4>
                             <p class="text-zinc-400 text-sm mt-1">Mini classic burger, fries, drink</p>
                         </div>
 
+                        <!-- Item: Kid's Chicken Tenders -->
                         <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-5 hover:border-zinc-700 transition">
                             <img src="https://images.unsplash.com/photo-1562967914-608f82629710?auto=format&fit=crop&w=600&q=80" alt="Kid's Chicken Tenders" class="w-full h-44 object-cover rounded-xl mb-4">
                             <h4 class="text-xl font-bold">Kid's Chicken Tenders (2pc)</h4>
                             <p class="text-zinc-400 text-sm mt-1">Tenders, fries, drink</p>
                         </div>
 
+                        <!-- Item: Kid's Grilled Cheese -->
                         <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-5 hover:border-zinc-700 transition">
                             <img src="https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=600&q=80" alt="Kid's Grilled Cheese" class="w-full h-44 object-cover rounded-xl mb-4">
                             <h4 class="text-xl font-bold">Kid's Grilled Cheese</h4>
                             <p class="text-zinc-400 text-sm mt-1">Grilled cheese, fries, drink</p>
                         </div>
 
+                        <!-- Item: Kid's Pancakes -->
                         <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-5 hover:border-zinc-700 transition">
                             <img src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?auto=format&fit=crop&w=600&q=80" alt="Kid's Pancakes" class="w-full h-44 object-cover rounded-xl mb-4">
                             <h4 class="text-xl font-bold">Kid's Pancakes</h4>
@@ -312,29 +410,39 @@
                     </div>
                 </div>
 
+                <!-- ------------------------------------------------
+                     SUB-SECTION: FAMILY STYLE MEALS CATEGORY
+                     Note: the italic line under the heading is a
+                     shared note ("sides are swappable") that applies
+                     to every family pack card below it.
+                --------------------------------------------------- -->
                 <div id="family" class="space-y-6">
                     <h3 class="text-3xl font-extrabold text-orange-500 border-b border-zinc-800 pb-3">Family Style Meals</h3>
                     <p class="text-zinc-400 text-xs italic">Sides are swappable across all Family Packs — choice of fries, onion rings, or hash browns.</p>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         
+                        <!-- Item: Burger Family Pack -->
                         <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-5 hover:border-zinc-700 transition">
                             <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=600&q=80" alt="Burger Family Pack" class="w-full h-44 object-cover rounded-xl mb-4">
                             <h4 class="text-xl font-bold">Burger Family Pack</h4>
                             <p class="text-zinc-400 text-sm mt-1">4 Classic Burgers, 2 large sides, 4 drinks</p>
                         </div>
 
+                        <!-- Item: Chicken Family Pack -->
                         <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-5 hover:border-zinc-700 transition">
                             <img src="https://images.unsplash.com/photo-1562967914-608f82629710?auto=format&fit=crop&w=600&q=80" alt="Chicken Family Pack" class="w-full h-44 object-cover rounded-xl mb-4">
                             <h4 class="text-xl font-bold">Chicken Family Pack</h4>
                             <p class="text-zinc-400 text-sm mt-1">8 Chicken Tenders, 2 large sides, 4 drinks</p>
                         </div>
 
+                        <!-- Item: Mix & Match Family Pack -->
                         <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-5 hover:border-zinc-700 transition">
                             <img src="https://images.unsplash.com/photo-1586190848861-99aa4a171e90?auto=format&fit=crop&w=600&q=80" alt="Mix & Match Family Pack" class="w-full h-44 object-cover rounded-xl mb-4">
                             <h4 class="text-xl font-bold">Mix & Match Family Pack</h4>
                             <p class="text-zinc-400 text-sm mt-1">2 Burgers + 2 Crispy Chicken Sandwiches, 2 large sides, 4 drinks</p>
                         </div>
 
+                        <!-- Item: Breakfast Family Pack -->
                         <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-5 hover:border-zinc-700 transition">
                             <img src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?auto=format&fit=crop&w=600&q=80" alt="Breakfast Family Pack" class="w-full h-44 object-cover rounded-xl mb-4">
                             <h4 class="text-xl font-bold">Breakfast Family Pack</h4>
@@ -344,40 +452,52 @@
                     </div>
                 </div>
 
+                <!-- ------------------------------------------------
+                     SUB-SECTION: SAUCES & CONDIMENTS CATEGORY
+                     Note: these cards are smaller/simpler than the
+                     food cards above (smaller photo, shorter text)
+                     since sauces don't need as much description.
+                --------------------------------------------------- -->
                 <div id="sauces" class="space-y-6">
                     <h3 class="text-3xl font-extrabold text-orange-500 border-b border-zinc-800 pb-3">Sauces & Condiments</h3>
                     <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
                         
+                        <!-- Item: Heinz Ketchup -->
                         <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-4 hover:border-zinc-700 transition">
                             <img src="http://googleusercontent.com/image_collection/image_retrieval/4804530041542124347_0" alt="Ketchup" class="w-full h-32 object-cover rounded-xl mb-3">
                             <h4 class="text-base font-bold">Heinz Ketchup</h4>
                             <p class="text-zinc-400 text-xs mt-0.5">No Sugar Added</p>
                         </div>
 
+                        <!-- Item: Ray's BBQ Sauce -->
                         <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-4 hover:border-zinc-700 transition">
                             <img src="http://googleusercontent.com/image_collection/image_retrieval/10947668631855861546_0" alt="BBQ Sauce" class="w-full h-32 object-cover rounded-xl mb-3">
                             <h4 class="text-base font-bold">Ray's BBQ Sauce</h4>
                             <p class="text-zinc-400 text-xs mt-0.5">Original / Hickory No Sugar</p>
                         </div>
 
+                        <!-- Item: Ray's Honey Mustard -->
                         <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-4 hover:border-zinc-700 transition">
                             <img src="https://images.unsplash.com/photo-1472476443507-c7a5948772fc?auto=format&fit=crop&w=600&q=80" alt="Honey Mustard" class="w-full h-32 object-cover rounded-xl mb-3">
                             <h4 class="text-base font-bold">Ray's Honey Mustard</h4>
                             <p class="text-zinc-400 text-xs mt-0.5">No Sugar Added</p>
                         </div>
 
+                        <!-- Item: Ranch Dressing -->
                         <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-4 hover:border-zinc-700 transition">
                             <img src="https://images.unsplash.com/photo-1585238342024-78d387f4a707?auto=format&fit=crop&w=600&q=80" alt="Ranch" class="w-full h-32 object-cover rounded-xl mb-3">
                             <h4 class="text-base font-bold">Ranch Dressing</h4>
                             <p class="text-zinc-400 text-xs mt-0.5">Buttermilk, herbs, garlic (sugar-free)</p>
                         </div>
 
+                        <!-- Item: Garlic Aioli -->
                         <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-4 hover:border-zinc-700 transition">
                             <img src="https://images.unsplash.com/photo-1572449043416-55f4685c9bb7?auto=format&fit=crop&w=600&q=80" alt="Garlic Aioli" class="w-full h-32 object-cover rounded-xl mb-3">
                             <h4 class="text-base font-bold">Garlic Aioli</h4>
                             <p class="text-zinc-400 text-xs mt-0.5">Mayo, roasted garlic, lemon</p>
                         </div>
 
+                        <!-- Item: Hot Sauce -->
                         <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-4 hover:border-zinc-700 transition">
                             <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=600&q=80" alt="Hot Sauce" class="w-full h-32 object-cover rounded-xl mb-3">
                             <h4 class="text-base font-bold">Hot Sauce</h4>
@@ -387,46 +507,57 @@
                     </div>
                 </div>
 
+                <!-- ------------------------------------------------
+                     SUB-SECTION: DRINKS CATEGORY
+                     Note: same small-card style as Sauces above.
+                --------------------------------------------------- -->
                 <div id="drinks" class="space-y-6">
                     <h3 class="text-3xl font-extrabold text-orange-500 border-b border-zinc-800 pb-3">Drinks</h3>
                     <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
                         
+                        <!-- Item: Coca-Cola Zero Sugar -->
                         <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-4 hover:border-zinc-700 transition">
                             <img src="http://googleusercontent.com/image_collection/image_retrieval/16662386947555306631_0" alt="Coca-Cola Zero Sugar" class="w-full h-36 object-cover rounded-xl mb-3">
                             <h4 class="text-base font-bold">Coca-Cola® Zero Sugar</h4>
                             <p class="text-zinc-400 text-xs mt-0.5">0g sugar, 0 calories</p>
                         </div>
 
+                        <!-- Item: Diet Coke -->
                         <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-4 hover:border-zinc-700 transition">
                             <img src="https://images.unsplash.com/photo-1622483767028-3f66f32aef97?auto=format&fit=crop&w=600&q=80" alt="Diet Coke" class="w-full h-36 object-cover rounded-xl mb-3">
                             <h4 class="text-base font-bold">Diet Coke®</h4>
                             <p class="text-zinc-400 text-xs mt-0.5">0g sugar, lighter flavor</p>
                         </div>
 
+                        <!-- Item: Sprite Zero Sugar -->
                         <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-4 hover:border-zinc-700 transition">
                             <img src="http://googleusercontent.com/image_collection/image_retrieval/4431890128163592214_0" alt="Sprite Zero Sugar" class="w-full h-36 object-cover rounded-xl mb-3">
                             <h4 class="text-base font-bold">Sprite Zero Sugar</h4>
                             <p class="text-zinc-400 text-xs mt-0.5">Zero-sugar Coke lineup</p>
                         </div>
 
+                        <!-- Item: Gatorade / Powerade Zero -->
                         <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-4 hover:border-zinc-700 transition">
                             <img src="http://googleusercontent.com/image_collection/image_retrieval/464958315050382687_0" alt="Gatorade Zero" class="w-full h-36 object-cover rounded-xl mb-3">
                             <h4 class="text-base font-bold">Gatorade / Powerade Zero</h4>
                             <p class="text-zinc-400 text-xs mt-0.5">Zero sugar, electrolytes</p>
                         </div>
 
+                        <!-- Item: Unsweetened Iced Tea -->
                         <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-4 hover:border-zinc-700 transition">
                             <img src="https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&w=600&q=80" alt="Unsweetened Iced Tea" class="w-full h-36 object-cover rounded-xl mb-3">
                             <h4 class="text-base font-bold">Unsweetened Iced Tea</h4>
                             <p class="text-zinc-400 text-xs mt-0.5">Brewed, lemon/mint on request</p>
                         </div>
 
+                        <!-- Item: Coffee / Cold Brew -->
                         <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-4 hover:border-zinc-700 transition">
                             <img src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=600&q=80" alt="Cold Brew Coffee" class="w-full h-36 object-cover rounded-xl mb-3">
                             <h4 class="text-base font-bold">Coffee / Cold Brew</h4>
                             <p class="text-zinc-400 text-xs mt-0.5">Black or cream, no syrups</p>
                         </div>
 
+                        <!-- Item: Milkshake -->
                         <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-4 hover:border-zinc-700 transition col-span-2 md:col-span-1">
                             <img src="https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&w=600&q=80" alt="Milkshake" class="w-full h-36 object-cover rounded-xl mb-3">
                             <h4 class="text-base font-bold">Milkshake</h4>
@@ -440,9 +571,16 @@
         </div>
     </section>
 
+    <!-- ============================================================
+         SECTION: FAQ (FREQUENTLY ASKED QUESTIONS)
+         What this does: Two clickable question/answer boxes near the
+         bottom of the page. Each box starts closed and expands to
+         show the answer when a visitor clicks/taps on the question.
+    ============================================================= -->
     <section class="py-16 px-6 max-w-3xl mx-auto space-y-8 border-t border-zinc-900">
         <h2 class="text-3xl md:text-4xl font-extrabold text-center tracking-tight">Frequently Asked Questions</h2>
         <div class="space-y-4">
+            <!-- FAQ #1 -->
             <details class="group bg-zinc-900/60 border border-zinc-800 rounded-2xl p-6 cursor-pointer">
                 <summary class="flex items-center justify-between font-bold text-lg text-white">
                     <span>How do you make fast food without added sugars?</span>
@@ -450,6 +588,7 @@
                 </summary>
                 <p class="mt-4 text-zinc-400 leading-relaxed">We focus on whole, high-quality ingredients, custom spice blends, and natural cooking techniques to lock in deep flavor without relying on added sugars or sweet glazes.</p>
             </details>
+            <!-- FAQ #2 -->
             <details class="group bg-zinc-900/60 border border-zinc-800 rounded-2xl p-6 cursor-pointer">
                 <summary class="flex items-center justify-between font-bold text-lg text-white">
                     <span>When and where are you launching?</span>
@@ -460,6 +599,11 @@
         </div>
     </section>
 
+    <!-- ============================================================
+         SECTION: FOOTER (bottom of page)
+         What this does: The final email signup box ("Join VIP") and
+         the copyright line at the very bottom of the page.
+    ============================================================= -->
     <footer class="py-16 border-t border-zinc-900 text-center px-6 bg-zinc-950">
         <div class="max-w-md mx-auto space-y-6">
             <h3 class="text-2xl font-bold">Don't miss the launch</h3>
